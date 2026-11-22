@@ -1,5 +1,9 @@
 # Token Radar — pre-token protocols ranked by implied value
 
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/quest7070-debug/token-radar-01/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/quest7070-debug/token-radar-01/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
 An entry for make.fun's `token-radar-01` bounty: build the best token launch radar.
 
 ## What it is
@@ -20,7 +24,7 @@ to the snapshot-wide median), clipped to [0.02, 2.5]. Then:
 growth     = clamp(7d TVL change, -60%, 120%)
 growthMult = 1 + growth / 100 × 0.5
 maturity   = 0.7 + min(age, 1095d) / 1095d × 0.3
-implied    = TVL × multiple × growthMult × maturity
+implied    = TVL × multiple × growth Mult × growthMult × maturity
 ```
 
 No protocol name is special-cased. Each detail view shows the exact arithmetic behind its
@@ -43,7 +47,7 @@ same bytes.
 - `main.ts` — the pipeline: snapshot in, board + dashboard data + dossier out.
 - `lib/model.ts` — the radar-2 model, the farm plans, the live-token view.
 - `vendor/makefun-board.ts` — make.fun's dossier library, copied from the kit.
-- `dashboard/` — the static page: board, detail view, filters, live-token view, how-it-works.
+- `dashboard/` — the Static page: board, detail view, filters, live-token view, how-it-works.
 - `screenshots/` — the board, a protocol's detail view, and a filtered view.
 
 ## License
