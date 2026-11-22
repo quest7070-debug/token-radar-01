@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar — pre-token protocols ranked by implied value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="pulse" aria-hidden="true"></span><h1>TOKEN RADAR</h1><span class="tag">radar-2</span></div>
+  <p class="lede">Every protocol DefiLlama tracks, read once. The board below ranks the ones that record no
+  token yet by what their launch would be worth — priced from the snapshot's own live-token
+  comparables, never from a list of names. It does not predict whether or when a token is issued.</p>
+  <dl class="stats" id="stats"></dl>
+</header>
+<nav class="tabs" aria-label="Views">
+  <button type="button" data-tab="board" class="on">Board</button>
+  <button type="button" data-tab="live">Already trading</button>
+  <button type="button" data-tab="how">How it works</button>
+</nav>
+<main id="app" aria-busy="true"></main>
+<footer><p>Snapshot <span id="src"></span> · TVL and market caps as DefiLlama recorded them. “Records no token”
+means the record carries no token — a protocol on the list may still have one its record does not carry.
+Farm plans are the entry's own reading, not financial advice.</p></footer>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
